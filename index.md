@@ -28,8 +28,8 @@ title: Aaron Weng | Software Developer
     .description { max-width: 540px; margin: 0; color: var(--muted); font-size: 1.15rem; }
     .links { display: flex; gap: 20px; margin-top: 30px; font-weight: bold; font-size: .9rem; }
     .links a:first-child { color: var(--accent); }
-    .photo-slot { aspect-ratio: 4 / 5; display: grid; place-items: center; border: 1px dashed var(--accent); background: #101a27; color: var(--muted); text-align: center; box-shadow: 8px 8px 0 rgba(255, 60, 172, .22); }
-    .photo-slot span { max-width: 150px; }
+    .photo-slot { aspect-ratio: 4 / 5; overflow: hidden; border: 1px dashed var(--accent); background: #101a27; box-shadow: 8px 8px 0 rgba(255, 60, 172, .22); }
+    .photo-slot img { width: 100%; height: 100%; display: block; object-fit: cover; }
     footer { padding: 25px 0; color: var(--muted); font-size: .8rem; }
     @media (max-width: 700px) { .nav, .main, footer { width: min(100% - 28px, 980px); } .intro { min-height: auto; grid-template-columns: 1fr; gap: 45px; padding: 75px 0; } .photo-slot { width: min(100%, 250px); } }
   </style>
@@ -49,7 +49,7 @@ title: Aaron Weng | Software Developer
         <p class="description">I’m interested in web applications, machine learning, cybersecurity, and systems programming. Welcome to my portfolio.</p>
         <div class="links"><a href="{{ '/projects/' | relative_url }}">See my projects →</a><a href="https://github.com/aaronweng1">GitHub ↗</a></div>
       </div>
-      <div class="photo-slot" aria-label="Place a profile photo here"><span>Add your photo here</span></div>
+      <div class="photo-slot"><img src="{{ '/headshot.jpg' | relative_url }}" alt="Aaron Weng" /></div>
     </section>
   </main>
   <footer>© 2026 Aaron Weng</footer>
